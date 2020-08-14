@@ -39,5 +39,10 @@ matrix:
       script:
         - "bundle exec rake r10k:check"
         - "bundle exec rake r10k:install"
+
+    - env: "CHECK=spec"
+      script:
+        - "bundle exec rake r10k:install"
+        - 'bundle exec rake $CHECK'
 notifications:
   email: false

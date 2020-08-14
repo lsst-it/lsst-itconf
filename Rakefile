@@ -75,3 +75,9 @@ EOM
   end
 end
 
+namespace :r10k do
+  desc 'Create puppet module fixtures using r10k'
+  task :install do
+    sh("r10k puppetfile install --verbose --moduledir=#{Dir.pwd}/spec/fixtures/modules")
+  end
+end

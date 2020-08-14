@@ -5,6 +5,13 @@ require 'spec_helper_local' if File.file?(File.join(File.dirname(__FILE__), 'spe
 
 include RspecPuppetFacts
 
+def root_path
+  File.expand_path(File.join(__FILE__, '..', '..'))
+end
+def fixtures_path
+  File.join(root_path, 'spec', 'fixtures')
+end
+
 default_facts = {
   puppetversion: Puppet.version,
   facterversion: Facter.version,
@@ -17,6 +24,11 @@ def lsst_sites
     cp
     tu
   ]
+end
+
+def lsst_roles
+  role_dir = File.join(root_path, 'hieradata', 'org', 'lsst', 'role')
+  Dir.entries(role_dir).grep_v(%r{^\.}).map { |x| x.sub('.yaml', '') }
 end
 
 default_fact_files = [
@@ -33,9 +45,6 @@ default_fact_files.each do |f|
     RSpec.configuration.reporter.message "WARNING: Unable to load #{f}: #{e}"
   end
 end
-
-root_path = File.expand_path(File.join(__FILE__, '..', '..'))
-fixtures_path = File.join(root_path, 'spec', 'fixtures')
 
 RSpec.configure do |c|
   c.default_facts = default_facts

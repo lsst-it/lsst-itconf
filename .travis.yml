@@ -37,7 +37,7 @@ matrix:
 
     - env: "TEST=r10k"
       script:
-        - "bundle exec r10k puppetfile check"
+        - "bundle exec rake r10k:check"
         - "bundle exec rake r10k:install"
 notifications:
   email: false

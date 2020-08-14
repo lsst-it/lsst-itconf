@@ -31,6 +31,7 @@ fixtures_path = File.join(root_path, 'spec', 'fixtures')
 RSpec.configure do |c|
   c.default_facts = default_facts
   c.module_path = "#{File.join(root_path, 'site')}:#{File.join(fixtures_path, 'modules')}"
+  c.manifest = File.join(root_path, 'manifests', 'site.pp')
   c.before :each do
     # set to strictest setting for testing
     # by default Puppet runs at warning level

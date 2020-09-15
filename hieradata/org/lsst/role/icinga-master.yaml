@@ -3,6 +3,8 @@ classes:
   - "profile::core::common"
   - "profile::core::icinga_master"
   - "profile::core::icinga_resources"
+  - "profile::icinga::pagerduty"
+
 packages:
   - "bash-completion"
   - "bash-completion-extras"

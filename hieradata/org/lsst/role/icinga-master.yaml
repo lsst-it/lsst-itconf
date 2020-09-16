@@ -28,3 +28,7 @@ profile::core::icinga_resources::http_template: "HttpTemplate"
 profile::core::icinga_resources::dns_template: "DnsTemplate"
 profile::core::icinga_resources::master_template: "MasterTemplate"
 profile::core::icinga_resources::ipa_template: "IpaTemplate"
+#Users for Notifications
+profile::icinga::pagerduty::server_username: "server-pager"
+profile::icinga::pagerduty::network_username: "network-pager"
+profile::icinga::network::network_username: "network-pager"

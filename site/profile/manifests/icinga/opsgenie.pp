@@ -211,7 +211,7 @@ class profile::icinga::opsgenie (
           "command_id": "253",
           "value": {
             "type": "Function",
-            "body": "{{host.groups.join(\",\")}}"
+            "body": "host.groups.join(\",\")"
           }
         },
         "-lhc": {
@@ -336,7 +336,7 @@ class profile::icinga::opsgenie (
           "command_id": "254",
           "value": {
             "type": "Function",
-            "body": "{{host.groups.join(\",\")}}"
+            "body": "host.groups.join(\",\")"
           }
         },
         "-lhc": {
@@ -415,7 +415,7 @@ class profile::icinga::opsgenie (
           "command_id": "254",
           "value": {
               "type": "Function",
-              "body": "{{service.groups.join(\",\")}}"
+              "body": "service.groups.join(\",\")"
           }
         },
         "-lsch": {

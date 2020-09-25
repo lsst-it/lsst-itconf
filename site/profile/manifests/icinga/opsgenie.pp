@@ -207,6 +207,13 @@ class profile::icinga::opsgenie (
           "command_id": "253",
           "value": "$host.group$"
         },
+        "-hgns": {
+          "command_id": "253",
+          "value": {
+            "type": "Function",
+            "body": "host.groups.join(\",\")"
+          }
+        },
         "-lhc": {
           "command_id": "253",
           "value": "$host.last_check$"
@@ -325,6 +332,13 @@ class profile::icinga::opsgenie (
           "command_id": "254",
           "value": "$host.group$"
         },
+        "-hgns": {
+          "command_id": "254",
+          "value": {
+            "type": "Function",
+            "body": "host.groups.join(\",\")"
+          }
+        },
         "-lhc": {
           "command_id": "254",
           "value": "$host.last_check$"
@@ -399,7 +413,10 @@ class profile::icinga::opsgenie (
         },
         "-sgns": {
           "command_id": "254",
-          "value": "$service.group$"
+          "value": {
+              "type": "Function",
+              "body": "service.groups.join(\",\")"
+          }
         },
         "-lsch": {
           "command_id": "254",

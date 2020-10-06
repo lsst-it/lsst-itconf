@@ -16,4 +16,9 @@ class profile::core::perfsonar {
     ssl_chain_file     => "${le_root}/fullchain.pem",
     ssl_key            => "${le_root}/privkey.pem",
   }
+
+  cron::daily { 'apache-tls-reload':
+    user    => 'root',
+    command => 'systemctl reload httpd',
+  }
 }

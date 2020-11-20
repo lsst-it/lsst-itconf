@@ -3,7 +3,8 @@ classes:
   - "profile::core::common"
   - "profile::ccs::common"
   - "profile::ccs::tomcat"
-  - "ccs_sal"
+  #- "ccs_sal"  # disable puppet management of openslice/sal while it is being
+  # upgraded
 
 nginx::confd_purge: true
 nginx::server_purge: true

@@ -77,6 +77,9 @@ mod 'puppet/ssh_keygen', '4.0.0'
 mod 'puppet/telegraf', '3.0.0'
 mod 'puppetlabs-puppetserver_gem', '1.1.1'
 
+# Arista Module
+mod 'aristanetworks/eos', '1.5.0'
+
 mod 'puppet/yum', '4.0.0'
 mod 'richardc/datacat', '0.6.2'
 mod 'stahnma/epel', '1.3.1'

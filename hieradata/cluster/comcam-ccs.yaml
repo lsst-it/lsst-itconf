@@ -112,6 +112,7 @@ ccs_software::installations:
     aliases:
       - "puppet-2.0.0"
 
+<<<<<<< HEAD
   comcam-software-2.0.1:
     aliases:
       - "puppet-2.0.1"
@@ -125,4 +126,6 @@ ccs_software::installations:
       - "puppet-pathfinder-1.0.1"   
       - "pathfinder-prod"
 
+=======
+>>>>>>> 203e405... Update to comcam software 2.0.0 (IT-2753)
 profile::icinga::agent::host_template: "ComCamHostTemplate"

@@ -91,5 +91,9 @@ ccs_software::installations:
   pathfinder-software-1.0.1:
     aliases: 
       - "puppet-pathfinder-1.0.1"   
+
+  pathfinder-software-1.0.2:
+    aliases: 
+      - "puppet-pathfinder-1.0.2"   
       - "pathfinder-prod"
 

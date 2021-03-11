@@ -120,6 +120,10 @@ ccs_software::installations:
     aliases:
       - "puppet-2.0.2"
 
+  comcam-software-2.0.3:
+    aliases:
+      - "puppet-2.0.3"
+
   pathfinder-software-1.0.1:
     aliases: 
       - "puppet-pathfinder-1.0.1"   
